@@ -1,0 +1,26 @@
+.title {
+    font-family: "Rokkitt", serif;
+    font-style: normal;
+    font-size: 40px;
+    color: white;
+}
+
+.title-info {
+    font-family: "Rokkitt", serif;
+    font-style: normal;
+    font-size: 36px;
+    color: white;
+}
+
+.special {
+    text-decoration: underline;
+    -webkit-text-decoration-color: gainsboro; /* safari still uses vendor prefix */
+    text-decoration-color: gainsboro;
+}
+
+.dsc-title {
+    font-family: "Rokkitt", serif;
+    font-style: bold;
+    font-size: 30px;
+    color: black;
+}
