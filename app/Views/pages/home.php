@@ -11,21 +11,21 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
-                <img src="assets/img/burger.jpg" style="background-size:cover;" class="d-block w-100" alt="...">
+                <img src="assets/img/carousel/burger.jpg" style="background-size:cover;" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-md-block">
                     <h5>Burger Bagor</h5>
                     <p>Some representative placeholder content for the first slide.</p>
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="assets/img/hotdog.jpg" class="d-block w-100" alt="...">
+                <img src="assets/img/carousel/hotdog.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-md-block">
                     <h5>Gelato Maman</h5>
                     <p>Some representative placeholder content for the second slide.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="assets/img/salad.jpg" class="d-block w-100" alt="...">
+                <img src="assets/img/carousel/salad.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-md-block">
                     <h5>Mie Enak</h5>
                     <p>Some representative placeholder content for the third slide.</p>
@@ -48,68 +48,19 @@
 <section id="explore-page" class="container bd-gutter mt-5 mb-5">
     <hr class="solid">
     <h2>Explore Makanan</h2>
-    <div class="col">
+    <div class="col mt-3">
         <div class="row row-cols-1 row-cols-md-3 g-4">
+            <?php foreach($makanan as $mkn) : ?>
             <div class="col">
                 <div class="card btn" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-                    <img src="assets/burger2.png" class="card-img-top" alt="...">
+                    <img src="assets/img/food/<?php echo $mkn['foto_makanan']?>" class="card-img-top" alt="..." style="height: 300px; width:100%; object-fit:cover">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title"><?php echo $mkn['nama_makanan'] ?></h5>
+                        <p class="card-text"><?php echo $mkn['caption'] ?></p>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card btn" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-                    <img src="assets/ekrim2.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card btn" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-                    <img src="assets/mie.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural
-                            lead-in to additional content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card btn" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-                    <img src="assets/eskrim.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card btn" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-                    <img src="assets/sate.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card btn" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-                    <img src="assets/satejagung.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section> <!-- Explore Section End -->
@@ -121,75 +72,26 @@
     <div class="col">
         <div class="row">
             <div class="d-flex flex-wrap gap-3 justify-content-center">
+                <?php foreach($warung as $wrg) : ?>
                 <div class="cards">
-                    <img src="assets/eskrim.png" alt="" srcset="">
+                    <img src="assets/img/warunk/<?= $wrg['foto_warung']; ?>" alt="" srcset="">
                     <div class="details">
-                        <h4>Caffe</h4>
-                        <p>Caffe terdekat</p>
+                        <h4><?= $wrg['nama_warung']; ?></h4>
+                        <p><?= $wrg['jenis_warung']; ?></p>
                         <ul class="social-media">
                             <li>
-                                <a href="#"><i class="bi bi-geo-alt-fill"></i></a>
+                                <a href="#" style="text-decoration: none;"><i class="text-white bi bi-geo-alt-fill"> <?= $wrg['lokasi']; ?></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="#" style="text-decoration: none;"><i class="text-white bi bi-instagram"> <?= $wrg['instagram']; ?></i></a>
                             </li>
                             <li>
-                                <a href="#"></a>
+                                <a href="#" style="text-decoration: none;"><i class="text-white bi bi-whatsapp"> <?= $wrg['telp']; ?></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="cards">
-                    <img src="assets/eskrim.png" alt="" srcset="">
-                    <div class="details">
-                        <h4>Caffe</h4>
-                        <p>Caffe terdekat</p>
-                    </div>
-                    <ul class="social-media">
-                        <li>
-                            <a href="#"><i class="bi bi-geo-alt-fill"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="bi bi-instagram"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="cards">
-                    <img src="assets/eskrim.png" alt="" srcset="">
-                    <div class="details">
-                        <h4>Caffe</h4>
-                        <p>Caffe terdekat</p>
-                    </div>
-                    <ul class="social-media">
-                        <li>
-                            <a href="#"><i class="bi bi-geo-alt-fill"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="bi bi-instagram"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="cards">
-                    <img src="assets/eskrim.png" alt="" srcset="">
-                    <div class="details">
-                        <h4>Caffe</h4>
-                        <p>Caffe terdekat</p>
-                    </div>
-                    <ul class="social-media">
-                        <li>
-                            <a href="#"><i class="bi bi-geo-alt-fill"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="bi bi-instagram"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"></a>
-                        </li>
-                    </ul>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
