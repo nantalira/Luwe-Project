@@ -7,7 +7,7 @@
     "require": {
         "php": "^7.4 || ^8.0",
         "myth/auth": "^1.0",
-        "codeigniter4/framework": "^4.0"
+        "codeigniter4/codeigniter4": "dev-develop"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9",
@@ -35,5 +35,12 @@
         "source": "https://github.com/codeigniter4/CodeIgniter4",
         "slack": "https://codeigniterchat.slack.com"
     },
-    "prefer-stable": true
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/codeigniter4/codeigniter4"
+        }
+    ]
 }
