@@ -2,11 +2,13 @@
 
 namespace App\Controllers;
 
-class Pages extends BaseController {
+class Pages extends BaseController
+{
     protected $modelmakanan;
     protected $modelwarung;
-     
-    public function __construct() {
+
+    public function __construct()
+    {
         $this->modelmakanan = new \App\Models\ModelMakanan();
         $this->modelwarung = new \App\Models\ModelWarung();
     }
@@ -21,8 +23,6 @@ class Pages extends BaseController {
             'makanan' => $makanan,
             'warung' => $warung
         ];
-
-
         return view('pages/home', $data);
     }
 }

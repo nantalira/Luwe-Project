@@ -2,7 +2,7 @@
 <header class="navbar navbar-expand-lg bd-navbar sticky-top text-bg-light">
     <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap justify-content-lg-around justify-content-between" aria-label="Main navigation" id="section-nav">
         <a class="navbar-brand" href="#">
-            <img src="assets/img/navbar/logo.png" alt="logo" class="icon">
+            <img src="<?= base_url() ?>/assets/img/navbar/logo.png" alt="logo" class="icon">
         </a>
         <!-- offcanvas -->
         <button class="btn btn-primary navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle
@@ -11,7 +11,7 @@
         <div class="offcanvas-lg offcanvas-end d-lg-flex" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
             <div class="offcanvas-header px-4 pb-0">
                 <a class="navbar-brand" href="index2.html">
-                    <img src="assets/img/navbar/logo.png" alt="logo" class="img-fluid">
+                    <img src="<?= base_url() ?>/assets/img/navbar/logo.png" alt="logo" class="img-fluid">
                 </a>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar" aria-label="Close"></button>
             </div>
@@ -20,16 +20,16 @@
                 <div class="navbar-nav">
                     <!-- nav menu -->
                     <div class="nav-item">
-                        <a class="nav-link" href="#home-page">Home</a>
+                        <a class="nav-link" href="<?= base_url() ?>/#home-page">Home</a>
                     </div>
                     <div class="nav-item">
-                        <a class="nav-link" href="#explore-page">Explore</a>
+                        <a class="nav-link" href="<?= base_url() ?>/#explore-page">Explore</a>
                     </div>
                     <div class="nav-item">
-                        <a class="nav-link" href="#warung">Warung</a>
+                        <a class="nav-link" href="<?= base_url() ?>/#warung">Warung</a>
                     </div>
                     <div class="nav-item">
-                        <a class="nav-link" href="/contact">Contact</a>
+                        <a class="nav-link" href="<?= base_url() ?>/contact">Contact</a>
                     </div>
                     <!-- nav menu -->
                     <hr class="d-lg-none text-primary-50">

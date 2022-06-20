@@ -50,16 +50,16 @@
     <h2>Explore Makanan</h2>
     <div class="col mt-3">
         <div class="row row-cols-1 row-cols-md-3 g-4">
-            <?php foreach($makanan as $mkn) : ?>
-            <div class="col">
-                <div class="card btn" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-                    <img src="assets/img/food/<?php echo $mkn['foto_makanan']?>" class="card-img-top" alt="..." style="height: 300px; width:100%; object-fit:cover">
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo $mkn['nama_makanan'] ?></h5>
-                        <p class="card-text"><?php echo $mkn['caption'] ?></p>
+            <?php foreach ($makanan as $mkn) : ?>
+                <div class="col">
+                    <div class="card btn" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                        <img src="assets/img/food/<?php echo $mkn['foto_makanan'] ?>" class="card-img-top" alt="..." style="height: 300px; width:100%; object-fit:cover">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $mkn['nama_makanan'] ?></h5>
+                            <p class="card-text"><?php echo $mkn['caption'] ?></p>
+                        </div>
                     </div>
                 </div>
-            </div>
             <?php endforeach; ?>
         </div>
     </div>
@@ -72,25 +72,25 @@
     <div class="col">
         <div class="row">
             <div class="d-flex flex-wrap gap-3 justify-content-center">
-                <?php foreach($warung as $wrg) : ?>
-                <div class="cards">
-                    <img src="assets/img/warunk/<?= $wrg['foto_warung']; ?>" alt="" srcset="">
-                    <div class="details">
-                        <h4><?= $wrg['nama_warung']; ?></h4>
-                        <p><?= $wrg['jenis_warung']; ?></p>
-                        <ul class="social-media">
-                            <li>
-                                <a href="#" style="text-decoration: none;"><i class="text-white bi bi-geo-alt-fill"> <?= $wrg['lokasi']; ?></i></a>
-                            </li>
-                            <li>
-                                <a href="#" style="text-decoration: none;"><i class="text-white bi bi-instagram"> <?= $wrg['instagram']; ?></i></a>
-                            </li>
-                            <li>
-                                <a href="#" style="text-decoration: none;"><i class="text-white bi bi-whatsapp"> <?= $wrg['telp']; ?></i></a>
-                            </li>
-                        </ul>
+                <?php foreach ($warung as $wrg) : ?>
+                    <div class="cards">
+                        <img src="assets/img/warunk/<?= $wrg['foto_warung']; ?>" alt="" srcset="">
+                        <div class="details">
+                            <h4><?= $wrg['nama_warung']; ?></h4>
+                            <p><?= $wrg['jenis_warung']; ?></p>
+                            <ul class="social-media">
+                                <li>
+                                    <a href="#" style="text-decoration: none;"><i class="text-white bi bi-geo-alt-fill"> <?= $wrg['lokasi']; ?></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" style="text-decoration: none;"><i class="text-white bi bi-instagram"> <?= $wrg['instagram']; ?></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" style="text-decoration: none;"><i class="text-white bi bi-whatsapp"> <?= $wrg['telp']; ?></i></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
                 <?php endforeach; ?>
             </div>
         </div>

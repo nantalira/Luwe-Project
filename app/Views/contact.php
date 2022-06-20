@@ -1,3 +1,5 @@
+<?= $this->extend('layout/template'); ?>
+<?= $this->section('content'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,6 +26,14 @@
 </head>
 
 <body>
+    <?php if (session()->getFlashdata('pesan')) : ?>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <?= session()->getFlashdata('pesan'); ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    <?php endif; ?>
 
     <div class="contact1">
         <div class="container-contact1">
@@ -31,7 +41,9 @@
                 <img src="<?= base_url() ?>/assetcontact/images/img-01.png" alt="IMG">
             </div>
 
-            <form class="contact1-form validate-form">
+            <!-- flash data berhasil di simpan -->
+
+            <form action="contact/save" method="POST" class="contact1-form validate-form" enctype="multipart/form-data">
                 <span class="contact1-form-title">
                     Formulir Warung
                 </span>
@@ -41,7 +53,7 @@
                     <span class="shadow-input1"></span>
                 </div>
 
-                <div class="wrap-input1 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                <div class="wrap-input1 validate-input" data-validate="Menu is required">
                     <input class="input1" type="text" name="menu" placeholder="Menu Makanan">
                     <span class="shadow-input1"></span>
                 </div>
@@ -54,13 +66,13 @@
                 <div class="container">
                     <div class="mb-5">
                         <label for="Image" class="form-label">Upload Image</label>
-                        <input class="form-control" type="file" id="formFile" onchange="preview()">
+                        <input class="form-control" type="file" id="img" name="img" onchange="preview()">
                     </div>
                     <img id="frame" src="" class="img-fluid" />
                 </div>
 
                 <div class="container-contact1-form-btn">
-                    <button class="contact1-form-btn">
+                    <button class="contact1-form-btn" type="submit">
                         <span>
                             Submit Request
                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
@@ -112,3 +124,4 @@
 </body>
 
 </html>
+<?= $this->endSection(); ?>
