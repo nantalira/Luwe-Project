@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 20 Jun 2022 pada 15.11
+-- Waktu pembuatan: 20 Jun 2022 pada 19.19
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.28
 
@@ -98,7 +98,9 @@ CREATE TABLE `auth_logins` (
 INSERT INTO `auth_logins` (`id`, `ip_address`, `email`, `user_id`, `date`, `success`) VALUES
 (1, '::1', 'deo.ai14@gmail.com', NULL, '2022-06-20 07:31:08', 0),
 (2, '::1', 'deo.ai14@gmail.com', 1, '2022-06-20 07:31:13', 0),
-(3, '::1', 'deo.ai14@gmail.com', 6, '2022-06-20 07:43:22', 1);
+(3, '::1', 'deo.ai14@gmail.com', 6, '2022-06-20 07:43:22', 1),
+(4, '::1', 'deo.ai14@gmail.com', 6, '2022-06-20 09:13:39', 1),
+(5, '::1', 'deo.ai14@gmail.com', 6, '2022-06-20 10:35:15', 1);
 
 -- --------------------------------------------------------
 
@@ -199,6 +201,43 @@ CREATE TABLE `migrations` (
 
 INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`, `batch`) VALUES
 (1, '2017-11-20-223112', 'Myth\\Auth\\Database\\Migrations\\CreateAuthTables', 'default', 'Myth\\Auth', 1655726865, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `request`
+--
+
+CREATE TABLE `request` (
+  `nama` varchar(255) NOT NULL,
+  `menu` varchar(255) NOT NULL,
+  `caption` varchar(255) NOT NULL,
+  `icon` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `request`
+--
+
+INSERT INTO `request` (`nama`, `menu`, `caption`, `icon`) VALUES
+('Dogecoin', 'Ayamas', 'sad', 'Softskill_4.png'),
+('Dogecoin', 'Ayamas', 'sad', 'Softskill_5.png'),
+('Deo Andrianto', 'Ayam', 'asd', 'Softskill_6.png'),
+('Deo Andrianto', 'Ayam', 'asdasd', 'Hardskill.png'),
+('Deo Andrianto', 'Ayam', 'asdasd', 'Hardskill_1.png'),
+('Deo Andrianto', 'Ayamsad', 'asdasd', 'Hardskill_2.png'),
+('Deo Andrianto', 'Ayam', 'sadasd', 'Softskill_7.png'),
+('Deo Andrianto', 'asdasd', 'asdasd', 'Hardskill_3.png'),
+('Deo Andrianto', 'sadasd', 'asdasdasd', 'Softskill_8.png'),
+('Deo Andrianto', 'asdasd', 'sadasdasd', 'Softskill_9.png'),
+('Deo Andrianto', 'Ayamdsad', 'sdadasd', 'Softskill_10.png'),
+('Deo Andrianto', 'dasdas', 'sdasdasd', 'Softskill_11.png'),
+('Dogecoin', 'dwadw', 'awdaw', 'Hardskill_4.png'),
+('shiba', 'wdaw', 'adwa', 'Hardskill_5.png'),
+('dawd', 'dwa', 'dwa', 'Relation (1)_5.png'),
+('dawdaw', 'wadwaw', 'aaa', 'Hardskill_6.png'),
+('wdaw', 'dawaa', 'aaa', 'Hardskill_7.png'),
+('awd', 'wad', 'wadwa', 'Softskill_12.png');
 
 -- --------------------------------------------------------
 
@@ -369,7 +408,7 @@ ALTER TABLE `auth_groups`
 -- AUTO_INCREMENT untuk tabel `auth_logins`
 --
 ALTER TABLE `auth_logins`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `auth_permissions`
