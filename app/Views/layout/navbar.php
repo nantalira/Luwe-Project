@@ -29,7 +29,7 @@
                         <a class="nav-link" href="#warung">Warung</a>
                     </div>
                     <div class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="/contact">Contact</a>
                     </div>
                     <!-- nav menu -->
                     <hr class="d-lg-none text-primary-50">
