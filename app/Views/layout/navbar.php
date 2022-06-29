@@ -20,7 +20,7 @@
                 <div class="navbar-nav">
                     <!-- nav menu -->
                     <div class="nav-item">
-                        <a class="nav-link" href="<?= base_url() ?>/#home-page">Home</a>
+                        <a class="nav-link" href="<?= base_url() ?>">Home</a>
                     </div>
                     <div class="nav-item">
                         <a class="nav-link" href="<?= base_url() ?>/#explore-page">Explore</a>
@@ -34,12 +34,14 @@
                     <!-- nav menu -->
                     <hr class="d-lg-none text-primary-50">
                     <!-- search bar -->
-                    <div class="navbar-nav d-flex d-lg-ps-3">
-                        <div class="input-group bm-0">
-                            <input type="text" class="form-control" placeholder="Cari Makan Yuk!" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                            <button class="input-group-text" id="basic-addon2"><i class="bi bi-search"></i></button>
+                    <form action="" method="POST">
+                        <div class="navbar-nav d-flex d-lg-ps-3">
+                            <div class="input-group bm-0">
+                                <input type="text" class="form-control" name="keyword" placeholder="Cari Makan Yuk!" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <button class="input-group-text" name="submit" id="basic-addon2"><i class="bi bi-search"></i></button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                     <!-- search bar end -->
                 </div>
             </div>
