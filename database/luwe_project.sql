@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 20 Jun 2022 pada 19.19
--- Versi server: 10.4.24-MariaDB
--- Versi PHP: 7.4.28
+-- Waktu pembuatan: 04 Jul 2022 pada 18.29
+-- Versi server: 10.4.22-MariaDB
+-- Versi PHP: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -153,6 +153,33 @@ CREATE TABLE `auth_users_permissions` (
   `user_id` int(11) UNSIGNED NOT NULL DEFAULT 0,
   `permission_id` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `detail`
+--
+
+CREATE TABLE `detail` (
+  `id_detail` int(5) NOT NULL,
+  `slug` varchar(50) NOT NULL,
+  `ft_makanan` varchar(100) NOT NULL,
+  `nm_warung` varchar(255) NOT NULL,
+  `dc_warung` text NOT NULL,
+  `alamat` text NOT NULL,
+  `operasional` varchar(15) NOT NULL,
+  `telp` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `detail`
+--
+
+INSERT INTO `detail` (`id_detail`, `slug`, `ft_makanan`, `nm_warung`, `dc_warung`, `alamat`, `operasional`, `telp`) VALUES
+(1, 'bakaran-lek-james', 'bakaran_lek_james.jpg', 'Bakaran Lek James', 'Aneka bakaran dengan harga murah, dan porsi yang banyak, menerima pesanan untuk hajatan, pernikahan, maupaun katering spesial nilabakar dan ayam bakar madu', 'Jl. Deo Iskandar No.42, Banyumanik', '09.00 - 21.00', '084563215794'),
+(2, 'bandos-oke', 'bandos_oke.jpg', 'Bandos OKE', 'Bandos OKE yang sudah terkenal sejak 1945 sering menjadi jajanan trending kini juga mencoba menyangi warung warung roti lainnya jadi jangan diragukan lagi untuk rasanya.', 'Jl. Pahlawan No.45, Semarang Tengah', '17.00-22.00', '085462147896'),
+(3, 'berkah-lawuh', 'berkah_lawuh.jpg', 'Berkah Lawuh', 'Penyedia referensi lauk pauk harian bagi anda yang bingung mau makan apa hari ini atau males untuk masak buat keluarga', 'Jl. Kesehatan No.20, Semarang Timur', '09.00-12.00', '084563214759'),
+(4, 'bakpia-patok-55', 'bp55.jpg', 'Bakpia Pathok 55', 'Bakpia pathok asli bikinan rumahan sendiri, kamu bisa beli banyak varian disini. bahkan kamu bisa request isian kamu sendiri biar bisa langsung dibikinin.', 'jl. Labuhan Sari Utara II no.43 Semarang Utara', '09.00 - 17.00', '087956421546');
 
 -- --------------------------------------------------------
 
@@ -363,6 +390,12 @@ ALTER TABLE `auth_users_permissions`
   ADD KEY `user_id_permission_id` (`user_id`,`permission_id`);
 
 --
+-- Indeks untuk tabel `detail`
+--
+ALTER TABLE `detail`
+  ADD PRIMARY KEY (`id_detail`);
+
+--
 -- Indeks untuk tabel `makanan`
 --
 ALTER TABLE `makanan`
@@ -427,6 +460,12 @@ ALTER TABLE `auth_reset_attempts`
 --
 ALTER TABLE `auth_tokens`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `detail`
+--
+ALTER TABLE `detail`
+  MODIFY `id_detail` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `makanan`
