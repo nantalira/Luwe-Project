@@ -4,9 +4,9 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ModelWarung extends Model
+class ModelDetail extends Model
 {
-    protected $table = 'warung';
+    protected $table = 'detail';
     public function getwarung($slug = false)
     {
         if ($slug == false) {

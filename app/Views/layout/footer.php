@@ -18,25 +18,25 @@
                          <ul class="nav flex-column">
                              <li class="nav-item mb-2">
                                  <a href="https://www.instagram.com/explore/tags/makanan/" target="_blank" class="nav-link p-0 text-white">
-                                     <img src="assets/img/footer/instagram.png" alt="#" />
+                                     <img src="<?= base_url() ?>/assets/img/footer/instagram.png" alt="#" />
                                      Instagram
                                  </a>
                              </li>
                              <li class="nav-item mb-2">
                                  <a href="https://www.youtube.com/results?search_query=makanan+enak" target="_blank" class="nav-link p-0 text-white">
-                                     <img src="assets/img/footer/yt.png" alt="#" />
+                                     <img src="<?= base_url() ?>/assets/img/footer/yt.png" alt="#" />
                                      Youtube
                                  </a>
                              </li>
                              <li class="nav-item mb-2">
                                  <a href="https://web.facebook.com/search/top?q=makanan" target="_blank" class="nav-link p-0 text-white">
-                                     <img src="assets/img/footer/fb.png" alt="" />
+                                     <img src="<?= base_url() ?>/assets/img/footer/fb.png" alt="" />
                                      Facebook
                                  </a>
                              </li>
                              <li class="nav-item mb-2">
                                  <a href="https://twitter.com/search?q=%23makanan&src=typeahead_click" target="_blank" class="nav-link p-0 text-white">
-                                     <img src="assets/img/footer/twitter.png" alt="" />
+                                     <img src="<?= base_url() ?>/assets/img/footer/twitter.png" alt="" />
                                      Twitter
                                  </a>
                              </li>
@@ -44,7 +44,7 @@
                      </div>
                      <div class="col-2 offset-6">
                          <h5>Unduh Aplikasi Kami</h5>
-                         <img src="assets/img/footer/qrcode.jpg" alt="" width="150px" style="border-radius: 10px" />
+                         <img src="<?= base_url() ?>/assets/img/footer/qrcode.jpg" alt="" width="150px" style="border-radius: 10px" />
                      </div>
                  </div>
                  <div class="d-flex justify-content-between pt-4 pb-1 my-2 border-top">

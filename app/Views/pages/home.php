@@ -11,21 +11,21 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
-                <img src="assets/img/carousel/burger.jpg" style="background-size:cover;" class="d-block w-100" alt="...">
+                <img src="<?= base_url() ?>/assets/img/carousel/burger.jpg" style="background-size:cover;" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-md-block">
                     <h5>Burger Bagor</h5>
                     <p>Some representative placeholder content for the first slide.</p>
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="assets/img/carousel/hotdog.jpg" class="d-block w-100" alt="...">
+                <img src="<?= base_url() ?>/assets/img/carousel/hotdog.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-md-block">
                     <h5>Gelato Maman</h5>
                     <p>Some representative placeholder content for the second slide.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="assets/img/carousel/salad.jpg" class="d-block w-100" alt="...">
+                <img src="<?= base_url() ?>/assets/img/carousel/salad.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-md-block">
                     <h5>Mie Enak</h5>
                     <p>Some representative placeholder content for the third slide.</p>
@@ -53,7 +53,7 @@
             <?php foreach ($makanan as $mkn) : ?>
                 <div class="col">
                     <div class="card btn" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-                        <img src="assets/img/food/<?php echo $mkn['foto_makanan'] ?>" class="card-img-top" alt="..." style="height: 300px; width:100%; object-fit:cover">
+                        <img src="<?= base_url() ?>/assets/img/food/<?php echo $mkn['foto_makanan'] ?>" class="card-img-top" alt="..." style="height: 300px; width:100%; object-fit:cover">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $mkn['nama_makanan'] ?></h5>
                             <p class="card-text"><?php echo $mkn['caption'] ?></p>
@@ -74,21 +74,24 @@
             <div class="d-flex flex-wrap gap-3 justify-content-center">
                 <?php foreach ($warung as $wrg) : ?>
                     <div class="cards">
-                        <img src="assets/img/warunk/<?= $wrg['foto_warung']; ?>" alt="" srcset="">
+
+                        <img src="<?= base_url() ?>/assets/img/warunk/<?= $wrg['foto_warung']; ?>" alt="" srcset="">
                         <div class="details">
-                            <h4><?= $wrg['nama_warung']; ?></h4>
-                            <p><?= $wrg['jenis_warung']; ?></p>
-                            <ul class="social-media">
-                                <li>
-                                    <a href="#" style="text-decoration: none;"><i class="text-white bi bi-geo-alt-fill"> <?= $wrg['lokasi']; ?></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" style="text-decoration: none;"><i class="text-white bi bi-instagram"> <?= $wrg['instagram']; ?></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" style="text-decoration: none;"><i class="text-white bi bi-whatsapp"> <?= $wrg['telp']; ?></i></a>
-                                </li>
-                            </ul>
+                            <a href="<?= base_url() ?>//pages/<?= $wrg['slug']; ?>" style="text-decoration: none;">
+                                <h4><?= $wrg['nama_warung']; ?></h4>
+                                <p><?= $wrg['jenis_warung']; ?></p>
+                                <ul class="social-media">
+                                    <li>
+                                        <a href="#" style="text-decoration: none;"><i class="text-white bi bi-geo-alt-fill"> <?= $wrg['lokasi']; ?></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="text-decoration: none;"><i class="text-white bi bi-instagram"> <?= $wrg['instagram']; ?></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="text-decoration: none;"><i class="text-white bi bi-whatsapp"> <?= $wrg['telp']; ?></i></a>
+                                    </li>
+                                </ul>
+                            </a>
                         </div>
                     </div>
                 <?php endforeach; ?>

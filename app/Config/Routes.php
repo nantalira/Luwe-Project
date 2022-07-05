@@ -39,7 +39,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Pages::index');
 $routes->get('/contact', 'Contact::cont');
 $routes->get('save', 'Contact::save');
-
+$routes->get('/pages/(:any)', 'Pages::detail/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
